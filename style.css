@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+:root {
+  --padding: 5vh;
+  --green: #596d48;
+}
+
 body {
   display: flex;
   margin: 0px;
@@ -17,27 +22,115 @@ form,
 }
 
 #left {
-  flex: 1 1 0px;
+  min-width: 30vw;
+  max-width: 30vw;
   background-image: url("./halie-west-25xggax4bSA-unsplash.jpg");
-}
-
-#banner {
-  background-color: rgba(0, 0, 0, 0.157);
-}
-
-#banner img {
-  max-width: 40px;
-  min-width: 40px;
+  background-repeat: no-repeat;
+  background-size: auto 100vh;
 }
 
 #right {
-  flex: 3 1 0px;
+  flex: 4 1 0px;
+}
+
+#left > div {
+  flex: 1 1 0px;
+}
+
+#spacer1 {
+  max-height: 17.5vh;
+}
+
+#banner {
+  background-color: rgba(0, 0, 0, 0.308);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 17.5vh;
+}
+
+#banner img {
+  max-height: 16.5vh;
+}
+
+#banner-credit {
+  max-height: 4vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 form > div {
+  background-color: lightgrey;
+  padding-left: 5vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#top {
+  justify-content: flex-end;
+  padding-bottom: var(--padding);
+}
+
+#middle {
+  background-color: white;
   flex: 1 1 0px;
+}
+
+#middle legend {
+  display: flex;
+  align-items: center;
+}
+
+#middle > * {
+  flex: 1 1 0px;
+}
+
+#top,
+#bottom {
+  min-height: 35vh;
+}
+
+#bottom {
+  justify-content: flex-start;
+  padding-top: var(--padding);
+  gap: var(--padding);
+}
+
+#bottom button {
+  max-width: 20vw;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  border-radius: 0.5cap;
+  border: none;
+  background-color: var(--green);
 }
 
 .row {
   display: flex;
+  gap: 5vw;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 0.5cap;
+  border: solid #e5e7eb 0.5px;
+}
+
+input:active {
+  border-radius: 0.5cap;
+  border: solid blue 0.5px;
+  box-shadow: 2px;
+}
+
+label {
+  font-size: 0.7rem;
 }
