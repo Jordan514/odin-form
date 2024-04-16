@@ -8,6 +8,11 @@
   --banner-height: 14vh;
 }
 
+@font-face {
+  font-family: NorseBold;
+  src: url("./Norse-Bold.otf");
+}
+
 body {
   display: flex;
   margin: 0px;
@@ -63,8 +68,15 @@ form,
   object-fit: contain;
 }
 
-#banner span {
-  font-size: 7vh;
+#banner div {
+  position: relative;
+  top: 1vh;
+  font-size: 9vh;
+  font-family: NorseBold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 #banner-credit {
@@ -86,6 +98,7 @@ form > div {
   justify-content: flex-end;
   padding-bottom: var(--padding);
   font-size: large;
+  font-weight: 600;
 }
 
 #middle {
