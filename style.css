@@ -5,6 +5,7 @@
 :root {
   --padding: 5vh;
   --green: #596d48;
+  --banner-height: 14vh;
 }
 
 body {
@@ -26,7 +27,7 @@ form,
   max-width: 30vw;
   background-image: url("./halie-west-25xggax4bSA-unsplash.jpg");
   background-repeat: no-repeat;
-  background-size: auto 100vh;
+  background-size: cover;
 }
 
 #right {
@@ -38,20 +39,32 @@ form,
 }
 
 #spacer1 {
-  max-height: 17.5vh;
+  max-height: calc(35vh - var(--banner-height));
 }
 
 #banner {
-  background-color: rgba(0, 0, 0, 0.308);
+  background-color: rgba(0, 0, 0, 0.508);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  max-height: 17.5vh;
+  max-height: var(--banner-height);
+  padding: 1vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
+#banner > * {
+  flex: 1 1 0;
 }
 
 #banner img {
-  max-height: 16.5vh;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+#banner span {
+  font-size: 7vh;
 }
 
 #banner-credit {
@@ -72,6 +85,7 @@ form > div {
 #top {
   justify-content: flex-end;
   padding-bottom: var(--padding);
+  font-size: large;
 }
 
 #middle {
@@ -108,6 +122,9 @@ form > div {
   border-radius: 0.5cap;
   border: none;
   background-color: var(--green);
+  color: white;
+  font-weight: 500;
+  font-size: medium;
 }
 
 .row {
@@ -125,12 +142,22 @@ input {
   border: solid #e5e7eb 0.5px;
 }
 
-input:active {
+input:focus {
   border-radius: 0.5cap;
-  border: solid blue 0.5px;
-  box-shadow: 2px;
+  border: thin blue 0.01vw;
+  box-shadow: 2px 5px 5px rgba(95, 94, 94, 0.485);
+}
+
+input:invalid {
+  border: thin red 0.01vw;
 }
 
 label {
   font-size: 0.7rem;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: bold;
 }
