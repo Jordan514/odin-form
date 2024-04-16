@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  margin: 0px;
+  height: 100vh;
+}
+
+form,
+#left,
+#right {
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+}
+
+#left {
+  flex: 1 1 0px;
+  background-image: url("./halie-west-25xggax4bSA-unsplash.jpg");
+}
+
+#banner {
+  background-color: rgba(0, 0, 0, 0.157);
+}
+
+#banner img {
+  max-width: 40px;
+  min-width: 40px;
+}
+
+#right {
+  flex: 3 1 0px;
+}
+
+form > div {
+  flex: 1 1 0px;
+}
+
+.row {
+  display: flex;
+}
